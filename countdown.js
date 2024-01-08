@@ -5,7 +5,7 @@ const Gauge = clui.Gauge;
 const bedtimeHour = process.argv[2];
 const thisTime = new Date();
 const hourLeft = parseInt(bedtimeHour) - thisTime.getHours();
-const percent = (hourLeft / 24) * 100;
+const percent = 100 - (hourLeft / 24) * 100;
 
 let sentence;
 
