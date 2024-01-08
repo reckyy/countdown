@@ -10,11 +10,13 @@ const percent = 100 - (hourLeft / 24) * 100;
 let sentence;
 
 if (percent <= 25){
-  sentence = "Have a nice day!";
+  sentence = "Have a nice day!🔥";
 } else if(percent <= 50){
-  sentence = "Only half a day left! Let's do our best!"
+  sentence = "Only half a day left! Let's do our best!🤞"
+}else if(percent <= 75){
+  sentence = "It's about to get dark. Almost!💪"
 }else{
-  sentence = "You've done a great job, get ready to rest.";
+  sentence = "You've done a great job, get ready to rest.💤";
 }
 
 console.log(Gauge(percent, 100, 20, 90, sentence));
