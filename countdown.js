@@ -1,10 +1,14 @@
 import clui from 'clui';
+import checkHourLeft from "./checkHourLeft.js";
 
 const Gauge = clui.Gauge;
 
 const bedtimeHour = process.argv[2];
 const thisTime = new Date();
 const hourLeft = parseInt(bedtimeHour) - thisTime.getHours();
+
+checkHourLeft(hourLeft);
+
 const percent = 100 - (hourLeft / 24) * 100;
 
 let sentence;
