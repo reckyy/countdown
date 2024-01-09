@@ -6,7 +6,7 @@ function checkHourLeft(hourLeft){
 }
 
 function checkArgv(argv){
-  if(typeof hourLeft === "undefined"){
+  if(typeof argv === "undefined"){
     console.log("Enter your bedtime, please.");
     process.exit();
   }
