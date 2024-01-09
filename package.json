@@ -24,5 +24,8 @@
   },
   "dependencies": {
     "clui": "^0.3.6"
+  },
+  "bin": {
+    "cdtobed": "./countdown.js"
   }
 }

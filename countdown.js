@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import clui from 'clui';
 import { checkHourLeft, checkArgv } from "./checkfunction.js";
 
