@@ -1,9 +1,12 @@
 import clui from 'clui';
-import checkHourLeft from "./checkHourLeft.js";
+import { checkHourLeft, checkArgv } from "./checkHourLeft.js";
 
 const Gauge = clui.Gauge;
 
 const bedtimeHour = process.argv[2];
+
+checkArgv(bedtimeHour);
+
 const thisTime = new Date();
 const hourLeft = parseInt(bedtimeHour) - thisTime.getHours();
 
