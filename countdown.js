@@ -1,5 +1,5 @@
 import clui from 'clui';
-import { checkHourLeft, checkArgv } from "./checkHourLeft.js";
+import { checkHourLeft, checkArgv } from "./checkfunction.js";
 
 const Gauge = clui.Gauge;
 
