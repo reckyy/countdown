@@ -1,5 +1,5 @@
-function checkHourLeft(hourLeft){
-  if ((hourLeft <= 0 || hourLeft >= 24)){
+function checkHourLeft(hourLeft, midnightHour, dateHour){
+  if ((hourLeft <= midnightHour || hourLeft >= dateHour)){
     console.log("Sleeping time should not exceed 24 hours, please.🙏");
     process.exit();
   }

@@ -4,6 +4,9 @@ import clui from 'clui';
 import { checkHourLeft, checkArgv } from "./checkfunction.js";
 
 const Gauge = clui.Gauge;
+const maxPercent = 100;
+const midnightHour = 0;
+const dateHour = 24;
 
 const bedtimeHour = process.argv[2];
 
@@ -12,9 +15,9 @@ checkArgv(bedtimeHour);
 const thisTime = new Date();
 const hourLeft = parseInt(bedtimeHour) - thisTime.getHours();
 
-checkHourLeft(hourLeft);
+checkHourLeft(hourLeft, midnightHour, dateHour);
 
-const percent = 100 - (hourLeft / 24) * 100;
+const percent = maxPercent - (hourLeft / dateHour) * maxPercent;
 
 let sentence;
 
@@ -28,4 +31,4 @@ if (percent <= 25){
   sentence = "You've done a great job, get ready to rest.💤";
 }
 
-console.log(Gauge(percent, 100, 20, 90, sentence));
+console.log(Gauge(percent, maxPercent, 20, 90, sentence));
