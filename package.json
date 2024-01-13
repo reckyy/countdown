@@ -16,9 +16,16 @@
     "url": "https://github.com/reckyy/countdown/issues"
   },
   "homepage": "https://github.com/reckyy/countdown#readme",
+  "type": "module",
   "devDependencies": {
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "3.1.1"
+  },
+  "dependencies": {
+    "clui": "^0.3.6"
+  },
+  "bin": {
+    "cdtobed": "./countdown.js"
   }
 }
