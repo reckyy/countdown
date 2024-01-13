@@ -13,10 +13,12 @@ npm install countdown-to-bedtime
 ```
 cdtobed [your bedtime]
 ```
+
 Enter a time within 24 hours of the current time in bedtime, please.
 
 If it is 22:00 at the time of execution
+
 ```
 % cdtobed 24
-[||||||||||||||||||-] You've done a great job, get ready to rest.💤 
+[||||||||||||||||||-] You've done a great job, get ready to rest.💤
 ```

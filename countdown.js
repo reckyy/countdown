@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import clui from 'clui';
+import clui from "clui";
 import { checkHourLeft, checkArgvIsUndefined } from "./checkfunction.js";
 
 const Gauge = clui.Gauge;
@@ -21,13 +21,13 @@ const percent = maxPercent - (hourLeft / dateHour) * maxPercent;
 
 let sentence;
 
-if (percent <= 25){
+if (percent <= 25) {
   sentence = "Have a nice day!🔥";
-} else if(percent <= 50){
-  sentence = "Only half a day left! Let's do our best!🤞"
-}else if(percent <= 75){
-  sentence = "It's about to get dark. Almost!💪"
-}else{
+} else if (percent <= 50) {
+  sentence = "Only half a day left! Let's do our best!🤞";
+} else if (percent <= 75) {
+  sentence = "It's about to get dark. Almost!💪";
+} else {
   sentence = "You've done a great job, get ready to rest.💤";
 }
 
