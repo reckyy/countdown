@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import clui from 'clui';
-import { checkHourLeft, checkArgv } from "./checkfunction.js";
+import { checkHourLeft, checkArgvIsUndefined } from "./checkfunction.js";
 
 const Gauge = clui.Gauge;
 const maxPercent = 100;
@@ -10,7 +10,7 @@ const dateHour = 24;
 
 const bedtimeHour = process.argv[2];
 
-checkArgv(bedtimeHour);
+checkArgvIsUndefined(bedtimeHour);
 
 const thisTime = new Date();
 const hourLeft = parseInt(bedtimeHour) - thisTime.getHours();
