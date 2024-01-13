@@ -1,7 +1,7 @@
 {
-  "name": "countdown",
+  "name": "countdown-to-bedtime",
   "version": "1.0.0",
-  "description": "",
+  "description": "This simple app displays your progress according to how long it takes you to fall asleep.You can quickly see how many hours you have left today.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
