@@ -5,11 +5,11 @@ function checkHourLeft(hourLeft, midnightHour, dateHour){
   }
 }
 
-function checkArgv(argv){
+function checkArgvIsUndefined(argv){
   if(typeof argv === "undefined"){
     console.log("Enter your bedtime, please.");
     process.exit();
   }
 }
 
-export { checkHourLeft, checkArgv };
+export { checkHourLeft, checkArgvIsUndefined };
