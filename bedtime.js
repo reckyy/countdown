@@ -3,9 +3,12 @@
 import clui from "clui";
 
 function checkHourLeft(hourLeft, midnightHour, dateHour) {
-  if (hourLeft <= midnightHour || hourLeft >= dateHour) {
+  if (hourLeft < midnightHour){
+    console.log("You must have had a long day. Remember to rest.😭");
+    process.exit();
+  }else if(hourLeft >= dateHour) {
     console.log(
-      "Sleep should not be negative or more than 24 hours, please.🙏",
+      "Sleep should not be more than 24 hours, please.🙏",
     );
     process.exit();
   }
@@ -23,12 +26,17 @@ const maxPercent = 100;
 const midnightHour = 0;
 const dateHour = 24;
 
-const bedtimeHour = process.argv[2];
+checkArgvIsUndefined(process.argv[2]);
 
-checkArgvIsUndefined(bedtimeHour);
+const bedtimeHour = parseInt(process.argv[2]);
+const currentHour = new Date().getHours();
 
-const thisTime = new Date();
-const hourLeft = parseInt(bedtimeHour) - thisTime.getHours();
+let hourLeft;
+if (currentHour < 12 && bedtimeHour > 12) {
+  hourLeft = bedtimeHour - dateHour - currentHour;
+} else {
+  hourLeft = bedtimeHour - currentHour;
+}
 
 checkHourLeft(hourLeft, midnightHour, dateHour);
 
