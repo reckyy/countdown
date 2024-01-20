@@ -20,9 +20,25 @@ npx cdtobed [your bedtime]
 
 Enter a time within 24 hours of the current time in bedtime, please.
 
-If it is 22:00 at the time of execution
+##pattern
+
+- If it is 22:00 at the time of execution
 
 ```
 % npx cdtobed 24
 [||||||||||||||||||-] You've done a great job, get ready to rest.💤
+```
+
+- Execution after the scheduled bedtime.
+
+```
+% npx cdtobed [bedtime]
+You must have had a long day. Remember to rest.😭
+```
+
+- If bedtime is specified more than 24 hours ahead.
+
+```
+% npx cdtobed [bedtime]
+Sleep should not be more than 24 hours, please.🙏
 ```
