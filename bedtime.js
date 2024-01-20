@@ -3,13 +3,11 @@
 import clui from "clui";
 
 function checkHourLeft(hourLeft, midnightHour, dateHour) {
-  if (hourLeft < midnightHour){
+  if (hourLeft < midnightHour) {
     console.log("You must have had a long day. Remember to rest.😭");
     process.exit();
-  }else if(hourLeft >= dateHour) {
-    console.log(
-      "Sleep should not be more than 24 hours, please.🙏",
-    );
+  } else if (hourLeft >= dateHour) {
+    console.log("Sleep should not be more than 24 hours, please.🙏");
     process.exit();
   }
 }
