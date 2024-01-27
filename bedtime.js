@@ -38,18 +38,18 @@ if (currentHour < 6 && bedtimeHour > 12) {
 
 checkHourLeft(hourLeft, midnightHour, dateHour);
 
-const percent = maxPercent - (hourLeft / dateHour) * maxPercent;
-
 let sentence;
 
-if (percent <= 25) {
+if (hourLeft >= 12 && hourLeft < dateHour) {
   sentence = "Have a nice day!🔥";
-} else if (percent <= 50) {
+} else if (hourLeft >= 8 && hourLeft < 12) {
   sentence = "Only half a day left! Let's do our best!🤞";
-} else if (percent <= 75) {
+} else if (hourLeft >= 4 && hourLeft < 8) {
   sentence = "It's about to get dark. Almost!💪";
-} else {
+} else if (hourLeft >= midnightHour && hourLeft < 4) {
   sentence = "You've done a great job, get ready to rest.💤";
 }
+
+const percent = maxPercent - (hourLeft / dateHour) * maxPercent;
 
 console.log(Gauge(percent, maxPercent, 20, 90, sentence));
