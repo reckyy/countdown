@@ -29,12 +29,7 @@ checkArgvIsUndefined(process.argv[2]);
 const bedtimeHour = parseInt(process.argv[2]);
 const currentHour = new Date().getHours();
 
-let hourLeft;
-if (currentHour < 6 && bedtimeHour > 12) {
-  hourLeft = bedtimeHour - dateHour - currentHour;
-} else {
-  hourLeft = bedtimeHour - currentHour;
-}
+const hourLeft = bedtimeHour - currentHour;
 
 checkHourLeft(hourLeft, midnightHour, dateHour);
 
