@@ -21,15 +21,18 @@ cdtobed [your bedtime]
 Enter a time within 24 hours of the current time in bedtime, please.
 
 ## attention
+
 ### If you want to enter a time for the next day...
+
 Please enter the number that adds up to 24.
 
 ### If you want to enter a time before the present...
-- For AM. 
+
+- For AM.
 
 Enter the time as it is.
 
-- For PM. 
+- For PM.
 
 The PM of the previous day cannot be entered. (Does not work properly).
 I'm sorry.
